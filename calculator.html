@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <button onclick="
+    calc += 1;    
+    update('1'); 
+    ">1</button>
+    
+    <button onclick="
+    calc += 2;    
+    update('2'); 
+    ">2</button>
+
+    <button onclick="
+    update('3');   
+    ">3</button>
+    
+    <button onclick="
+    update('+');    
+    ">+</button>
+    
+    <button onclick="  
+    update('-');
+    ">-</button>
+
+    <button onclick="
+    calculation(); 
+    ">=</button>
+
+    <button onclick="
+    calc = '';
+    localStorage.removeItem('calc');
+    console.log('Reset Done!');
+    ">Reset</button>
+
+
+    <script>
+        let calc = localStorage.getItem('calc') || "";
+        console.log(calc);
+        
+        function update(value){
+            calc += value;
+            localStorage.setItem('calc',calc);
+            console.log(calc);
+        }
+
+        function calculation(){
+            calc = eval(calc);
+            localStorage.setItem('calc',calc);
+            console.log(calc);
+        }
+
+    </script>
+</body>
+</html>

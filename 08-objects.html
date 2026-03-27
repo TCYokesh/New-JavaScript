@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>/
+
+<body>
+    <script>
+        const product = {
+            name : 'Yokesh',
+            id : 22
+        };
+
+        console.log(JSON.stringify(product));
+
+        const jsonstringify = JSON.stringify(product)
+        JSON.parse(JSON.stringify(product));
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+        const obj1 = {
+            message: 'hello'
+        };
+        
+        const obj2 = obj1;
+        obj1.message = 'Good Luck!';
+
+        const obj4 = {
+            product111: 'Bat',
+            price: 444,
+            method: function function1(){
+                console.log('method');
+            }
+        };
+
+        const { product0 , price } = obj4; 
+        console.log(price);
+
+        // cart.cost += 500;
+        // console.log(cart.product);
+        // console.log(cart.cost);
+
+        // cart['Delivery-Time'] = '3 Days';
+        // console.log(cart);
+
+
+
+        const cart = {
+            product1: {
+            name: 'BasketBall',
+            cost: 2095
+            },
+            product2: {
+            name: 'BasketBall',
+            cost: 2095
+            }
+        };
+        function compare(){
+            if (cart.product1.cost < cart.product2.cost){
+                return cart.product1;
+            }
+            else{
+                return cart.product2;
+            }
+            return
+        }
+        console.log(compare());
+
+        function isSameproduct() {
+            return cart.product1.name === cart.product2.name &&
+                   cart.product1.cost === cart.product2.cost;
+        }
+        console.log(isSameproduct())
+
+        let a = 'Good Morning';
+        console.log(a.toLowerCase().repeat(2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let arr = [10,20,30];
+        const lastValue = arr.length-1;
+        arr[lastValue] = 99;
+        console.log(arr[lastValue]);
+
+        function getLastValue(array) {
+            let lastValue = array.length-1;
+            return array[lastValue];
+        }
+        console.log(getLastValue([10,20,30,40]));
+
+        function arraySwap(array) {
+            let first = array[0];
+            let last = array.length-1;
+
+            array[0] = array[last];
+            array[last] = first;
+            return array;
+        }
+        console.log(arraySwap([10,20,30,40]))
+
+        for (let i=5 ; i>=0 ; i--) {
+            console.log(i);
+        }
+
+        let i = 5;
+        while(i > 0){
+            console.log(i);
+            i--;
+        }
+
+        let array1 = [1,2,3,4];
+        let array2 = [];
+
+        function addOne(array1){
+            let array2 = [];
+            for (i=0 ; i<array1.length ; i++) {
+                array2.push(array1[i]+1);
+            }
+            return array2;
+        }
+        console.log(addOne([-2,-1,1,99]));
+
+        function addnums(array1,nums){
+            let array2 = [];
+            for (i=0 ; i<array1.length ; i++) {
+                array2.push(array1[i]+nums);
+            }
+            return array2;
+        }
+        console.log(addnums([-2,-1,1,99],4));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Function</title>
+</head>
+<body>
+    <button class="js-btn" onclick="
+        
+    ">Click</button>
+
+
+
+
+
+
+    <script>
+        /*
+        const btnElement = document.querySelector('.js-btn');
+
+        const eventListener = () => {
+            console.log('Click');
+        };
+
+        btnElement.addEventListener('click',eventListener);
+        btnElement.removeEventListener('click',eventListener);
+
+        btnElement.addEventListener('click',() => {
+            console.log('Click2');
+        });
+        */
+        /*
+        function greetings(){
+            console.log('Hello');
+        }
+        greetings();
+        const num = 2;
+        const function1 = function greetings() {
+            console.log('Hello1');
+        };
+        console.log(function1);
+        console.log(typeof function1);
+        function1();
+
+        const obj1 = {
+            num:2,
+            name:'Yokesh',
+            fun: function greetings(){
+                console.log("Hello");
+            }
+        }
+        obj1.fun();
+
+        function display(param){
+            console.log(param);
+        }
+        display(2);
+        function run(param){
+            param();
+        }
+        run(function(){
+            console.log('hello4')
+        });
+        */
+        /*
+        setTimeout(function(){
+            console.log('timout')
+        }, 4000)
+        console.log('Next Line');
+        */
+       /*
+        setInterval(function(){
+            console.log('Interval')
+        },2000);
+        
+        */
+       /*
+        [
+            'Make Dinner',
+            'Wash Dishes',
+            'Watch youTube'
+        ].forEach((value,index) => {
+            console.log(index );
+            console.log(value);
+        });
+        
+       const regularfunction = function(param,param2){
+        console.log("Hello");
+        return 5;
+       }
+       regularfunction();
+        const arrowfunctions = (param,param2) => {
+            console.log("Hello");
+            return 5;
+        }
+        arrowfunctions();
+        
+        const oneParam = param => {
+            console.log(param + 1);
+        }
+        oneParam(2);
+
+        const oneline = () => 2 + 4;
+        console.log(oneline());
+
+        const object2 = {
+            method: () => {
+
+            },
+            method() {
+
+            }
+        };
+        */
+
+        console.log([1,2,-3,4].filter((value, index) => {
+            // if (value>=0){
+            //     return true;
+            // }else{
+            //     return false;
+            // }
+            return value >= 0;
+        }));
+
+        console.log([1,1,3].map((value,index) => {
+            return 10;
+        }));
+
+        console.log([1,1,3].map(value => {return value + 10;}));
+
+    </script>
+</body>
+</html>

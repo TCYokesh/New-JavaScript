@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 5px;
+        }
+        .js-subscribe{
+            height: 35px;
+            width: 110px;
+            font-size: 15px;
+            font-weight: bolder;
+            background-color: black;
+            color: white;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+        }
+        .js-subscribed{
+            background-color: white;
+            color: black;
+        }
+        .js-input{
+            height: 35px;
+            width: 180px;
+            padding-left: 10px;
+            font-size: 15px;
+        }
+        button{
+            padding: 12px 15px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(40, 210, 40);
+
+        }
+    </style>
+</head>
+<body>
+    <h2>YouTube Subscribe Button</h2>
+    <button onclick="
+    Subscribe();
+    " class="js-subscribe">Subscribe</button>
+    <br><br>
+    <br><br>
+    <h4>Amazon Shipping Calculator</h4>
+    <p>Order above 500 = Free Shipping</p>
+    <p>Order Below 500 = +100 For Shipping</p>
+    <input class="js-input" type="Amount" name="number" placeholder="Cost of Order" onkeydown="
+    enter();
+    "> <button onclick="amount()">Calculate</button>
+    <p class="js-amount"></p>
+    <br><br>
+    <br><br>
+    <h4>Rock Paper Scissors</h4>
+    <a href="06-rock-paper-scissors.html">click here</a> 
+    <script>
+        function Subscribe(){
+            const btnElement = document.querySelector('.js-subscribe'); 
+            if (btnElement.innerText === 'Subscribe') {
+                btnElement.innerHTML = 'Subscribed';
+                btnElement.classList.add('js-subscribed');
+            }
+            else {
+                btnElement.innerHTML = 'Subscribe';
+                btnElement.classList.remove('js-subscribed');
+            }
+        }
+        function amount() {
+            const Shipping = document.querySelector('.js-input');
+            if (parseInt(Shipping.value) >= 500){
+                document.querySelector('.js-amount').innerHTML = 'Free Shipping';
+            }
+            else{
+                document.querySelector('.js-amount').innerHTML = `Total = ${Number(Shipping.value) + 100}`;
+            }
+        }
+        function enter() {
+            if (event.key === 'Enter') {
+                amount();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button class="chan" onclick="
+    setTimeout(load,0);
+    setTimeout(change,4000); 
+    ">Start</button>
+
+    <br><br>
+
+    <button class="cart" onclick="
+    addToCart();
+    ">Add to Cart</button>
+    <div class="display"></div>
+
+    <button onclick="
+    adding();
+    ">Add</button>
+
+    <button onclick="
+    removing();
+    ">Remove</button>   
+    <script>
+        let add = function (){
+            console.log('Hello');
+        }
+
+        function runTwice(fun){
+            fun();
+            fun();
+        }
+        runTwice(add);
+
+
+        function load(){
+            document.querySelector('.chan').innerHTML = 'Loading...';
+        }
+        function change(){
+            document.querySelector('.chan').innerHTML = 'Finished!';
+        }
+        let timeoutId;
+
+        function addToCart() {
+        document.querySelector('.display').innerHTML = 'Added';
+
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(function () {
+            document.querySelector('.display').innerHTML = '';
+        }, 4000);
+        }
+
+        // setInterval(function(){
+        //     document.title = `(2) New Messages`; 
+        //     console.log("New")
+        // },2000);
+
+        let showNotification = false;
+        /*
+        setInterval(function () {
+        if (showNotification) {
+            document.title = '(2) New messages';
+        } else {
+            document.title = 'App';
+        }
+
+        showNotification = !showNotification;
+        }, 2000);
+        */
+
+        let index = 0;
+        function adding(){
+            index++;
+            document.title = `(${index}) New Messages`;
+        }
+        function removing(){
+            if (index>0){
+                index--;
+                document.title = `(${index}) New Messages`;
+            }
+            if (index == 0){
+                document.title = 'App';
+            }
+        }
+        const add1 = (a,b) => {console.log(a*b);};
+        add1(2,3);
+
+        arr1 = [1,-3,5];
+        arr2 = [-2,3,-5,7,10];
+        let countpositive = 0;
+        arr2.forEach((value) => {
+            if(value > 0){
+                countpositive++;
+            }
+        });
+        console.log(countpositive);
+
+        console.log([1,-3,5].map( value=>{return value+2;}));
+        
+        const adds = ((Array,Num)=>{
+            return Array.map(value => value+Num);
+        });
+        console.log(adds(arr2,2));
+
+        const oneline = (Array,Num) => Array.map(value => value + Num);
+        console.log(oneline(arr2,2));
+
+        arr3 = ['Egg','apple','egg','egg','ham'];
+
+        const result = arr3.filter(arr3 => arr3 !== "egg");
+        console.log(result);
+        
+        
+    </script>
+</body>
+</html>

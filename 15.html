@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-Exercise</title>
+</head>
+<body>
+    
+    <script type="module">
+        import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
+        
+        // let today = dayjs();
+        // let date = today.subtract(32,'days');
+        // let dateString = date.format('dddd');
+        // console.log(dateString);
+
+        export function isWeekend(date){
+            let dayName = date.format('dddd');
+            if(dayName === 'Saturday' ||dayName === 'Sunday'){
+                console.log("Weekend");
+            }
+            else{
+                console.log(dayName);
+            }
+        }
+        isWeekend(dayjs('2026-04-10'));
+    </script>
+</body>
+</html>

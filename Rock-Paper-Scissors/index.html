@@ -4,43 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
-    <link rel="icon" href="scissor-emoji.png">
+    <link rel="icon" href="images/scissor-emoji.png">
     <link rel="stylesheet" href="css/Rock-Paper-Scissors.css">
 </head>
 <body>
-        <h1 class="title">Rock Paper Scissors</h1>
-
-    <div class="container">
-        <button class="js-rock" onclick="
-        "><img src="images/rock-emoji.png" alt="">
-        </button>
-        
-        <button class="js-paper" onclick="
-        "><img src="images/paper-emoji.png" alt="">
-        </button>
-
-        <button class="js-scissor" onclick="
-        "><img src="images/scissor-emoji.png" alt="">
-        </button>
+    <nav class="navbar">
+        <div class="logo">Rock Paper Scissors</div>
+        <a class="btn" id="menuBtn">
+            <span class="bar"> </span>
+            <span class="bar"> </span>
+            <span class="bar"> </span>
+        </a>
+    </nav>
+    <div class="sideMenu">
+        <div class="anker">
+            <a href="AboutMe.html"target="_blank">AboutMe</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScoAq3tip9xuryxvpZCMNcZsPuD9UNXneQtPoe75nFJhcUvVg/viewform" target="_blank">FeedBacks</a>
+        </div>
+        <h4><a href="Yokesh_TC_Frontend_Developer.pdf" target="_blank">&copy; T.C.Yokesh</a></h4>
     </div>
+    <div class="new">
+        <div class="container">
+            <button class="js-rock" onclick="
+            "><img src="images/rock-emoji.png" alt="">
+            </button>
+            
+            <button class="js-paper" onclick="
+            "><img src="images/paper-emoji.png" alt="">
+            </button>
 
-    <div class="container2">
-        <button onclick="
-        Reset();
-        console.log('Reseted!');
-        " class="one">Reset</button>
-
-        <div class="result">
-            <p class="js-one"></p>
-
-            <p class="js-two"></p>
-
-            <p class="js-three"></p>
+            <button class="js-scissor" onclick="
+            "><img src="images/scissor-emoji.png" alt="">
+            </button>
         </div>
 
-        <button class="Auto" onclick="
-        autoplay();
-        ">Auto Play</button>
+        <div class="container2">
+            <button onclick="
+            Reset();
+            console.log('Reseted!');
+            " class="one">Reset</button>
+
+            <div class="result">
+                <p class="js-one"></p>
+
+                <p class="js-two"></p>
+
+                <p class="js-three"></p>
+            </div>
+
+            <button class="Auto" onclick="
+            autoplay();
+            ">Auto Play</button>
+        </div>
     </div>
 
     <script src="js/Rock-Paper-Scissor.js"></script>

@@ -16,7 +16,7 @@ export function renderPaymentSummary() {
 
             const option = getDeliveryOption(cartItem.deliveryOptionId);
             if (option && option.price > 0) {
-                shipping += option.price; // add per product
+                shipping += option.price;
             }
         });
 
@@ -69,10 +69,8 @@ export function renderPaymentSummary() {
         }
     }
 
-    // Initial render
     renderSummaryHTML();
 
-    // Listen to delivery option changes and recalc totals
     document.querySelectorAll('.delivery-option-input').forEach(input => {
         input.addEventListener('change', (e) => {
             const productId = e.target.dataset.productId;
@@ -83,11 +81,9 @@ export function renderPaymentSummary() {
             const cartItem = cart.find(item => item.productId === productId);
             if (cartItem) cartItem.deliveryOptionId = selectedOptionId;
 
-            renderSummaryHTML(); // recalc totals including per-product shipping
+            renderSummaryHTML();
         });
     });
-
-    // Update cart quantity at top
     const updateTop = document.querySelector('.js-cartQuantity-top');
     if (updateTop) updateTop.innerHTML = `${getCartQuantity()} Items`;
 }

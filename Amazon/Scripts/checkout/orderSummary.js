@@ -3,7 +3,7 @@ import {products} from '../../data/products.js';
 import { getCartQuantity, updateDeliveryOption } from '../../data/cart.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import { deliveryOptions,getDeliveryOption } from '../../data/deliveryoptions.js';
-
+import { renderPaymentSummary } from './paymentSummary.js';
 
 saveToStorage(cart);
 export function renderOrderSummary(){
@@ -154,6 +154,8 @@ cart.forEach((cartItem) => {
             const container = document.querySelector(`.js-cart-item-container-${productId}`);
             console.log(container);
             container.remove();
+            renderPaymentSummary();
+            
         })
     });
     document.querySelectorAll('.js-update').forEach((alias) => {
@@ -162,6 +164,7 @@ cart.forEach((cartItem) => {
             let cartItem = cart.find(item => item.productId === productId);
             cartItem.quantity += 1;
             saveToStorage(cart);
+            renderPaymentSummary();
 
             const quantityLabel = document.querySelector(`.js-cart-item-container-${productId} .quantity-label`);
             if (quantityLabel) {

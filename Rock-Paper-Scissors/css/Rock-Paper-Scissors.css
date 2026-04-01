@@ -10,22 +10,23 @@ body {
         #111827,
         #1f2937
     );
-    
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.container{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 .title {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 48px;
     font-weight: bold;
-    color: white
+    color: white;
+    margin-bottom: 36px;
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 button {
     height: 200px;
@@ -36,6 +37,7 @@ button {
     color: white;
     font-weight: bold;
     font-size: 44px;
+    cursor: pointer;
 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -48,56 +50,176 @@ button {
 }
 button:hover {
     border-color: orangered;
-    
     transform: scale(1.1);
-
     box-shadow: 
         0 0 25px rgba(255, 69, 0, 0.6),
         0 0 50px rgba(255, 69, 0, 0.3);
 }
-.one{
-    margin-left: 100px;
-}
-img{
+img {
     width: 50px;
     height: 50px;
-}
-/* .one img{
-    width: 70px;
-    height: 70px;
-    background-color: white;
-    border-radius: 50%;
-} */
-.js-one,
-.js-two,
-.js-three {
-    color: white;
-    font-size: 40px;
-    line-height: 1;
-    margin: 20px; 
 }
 .container2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
     margin-top: 20px;
 }
 .result {
     text-align: center;
-    margin: 0 auto;
-    height: 150px; 
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2px; 
 }
-.Auto{
+.js-one,
+.js-two,
+.js-three {
+    color: white;
+    font-size: 40px;
+    margin: 20px;
+}
+.one {
+    margin-left: 100px;
+}
+.Auto {
     margin-right: 100px;
-}
-.Reset{
-    margin-left: 150px;
 }
 .hidden {
     visibility: hidden;
+}
+
+
+@media (max-width: 768px) {
+
+    html, body {
+        overflow: auto;
+    }
+    .title {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 80px);
+        justify-content: center;
+        gap: 12px;
+        margin-top: 10px;
+    }
+    .container button {
+        height: 80px;
+        width: 80px;
+        margin: 0;
+    }
+    .container button:nth-child(3) {
+        grid-column: 1 / span 2;
+        justify-self: center;
+    }
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 320px;
+        min-height: 55vh;
+        margin: 10px auto 0;
+        gap: 12px;
+    }
+    .result {
+        text-align: center;
+    }
+    .js-one,
+    .js-two,
+    .js-three {
+        font-size: 18px;
+        margin: 4px;
+    }
+    .one {
+        height: 80px;
+        width: 80px;
+        font-size: 12px;
+        margin: 0 !important;
+    }
+    .Auto {
+        height: 80px;
+        width: 90px;
+        font-size: 12px;
+        margin: 0 !important;
+    }
+}
+.sideMenu {
+    position: fixed;
+    top: 72px;
+    left: -270px;
+    width: 270px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: block;
+    flex-direction: column;  
+    text-align: center;
+    transition: left 0.3s ease-in;
+    z-index: 2;
+}
+.sideMenu .anker a {
+    margin-top: 35px;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    color: white;
+    width: 100%;
+    text-align: center;
+    transition: all 0.2s ease;
+    justify-content: center;
+}
+.anker{
+    padding-top: 20px;
+    justify-content: center;
+}
+.sideMenu .anker a:hover {
+    color: red;
+}
+.sideMenu.active{
+    left: 0;
+}
+.new{
+    transition: filter 0.3s ease-in-out;
+}
+.new.blur{
+    filter:blur(5px);
+}
+h4{
+    margin-top: 420px;
+}
+h4 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+h4,a:hover{
+    color: red;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+.navbar{
+    height: 35px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.bar{
+   height: 5px;
+    width: 35px;
+    background-color: white;
+    display: block;
+    margin: 5px;
+    cursor: pointer;
+}
+.logo{
+    font-weight: bolder;
 }

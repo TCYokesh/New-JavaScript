@@ -33,7 +33,7 @@ export const products = [
       stars: 45,
       count: 127
     },
-    price: 2095,
+    price: 295,
     keywords: [
       "sports",
       "basketballs"
@@ -62,7 +62,7 @@ export const products = [
     name: "2 Slot Toaster - Black",
     rating: {
       stars: 50,
-      count: 2197
+      count: 1999
     },
     price: 1899,
     keywords: [
@@ -79,7 +79,7 @@ export const products = [
       stars: 45,
       count: 37
     },
-    price: 2067,
+    price: 1990,
     keywords: [
       "plates",
       "kitchen",
@@ -108,7 +108,7 @@ export const products = [
       stars: 45,
       count: 317
     },
-    price: 2400,
+    price: 999,
     keywords: [
       "hoodies",
       "sweaters",
@@ -123,7 +123,7 @@ export const products = [
       stars: 45,
       count: 144
     },
-    price: 3599,
+    price: 899,
     keywords: [
       "bathroom",
       "washroom",
@@ -140,7 +140,7 @@ export const products = [
       stars: 45,
       count: 305
     },
-    price: 2899,
+    price: 999,
     keywords: [
       "bathroom",
       "cleaning"
@@ -154,7 +154,7 @@ export const products = [
       stars: 45,
       count: 89
     },
-    price: 3390,
+    price: 2990,
     keywords: [
       "shoes",
       "running shoes",
@@ -169,7 +169,7 @@ export const products = [
       stars: 45,
       count: 235
     },
-    price: 2070,
+    price: 1070,
     keywords: [
       "robe",
       "swimsuit",
@@ -188,7 +188,7 @@ export const products = [
       stars: 45,
       count: 30
     },
-    price: 1560,
+    price: 1099,
     keywords: [
       "accessories",
       "shades"
@@ -202,7 +202,7 @@ export const products = [
       stars: 45,
       count: 562
     },
-    price: 2499,
+    price: 1499,
     keywords: [
       "footwear",
       "sandals",
@@ -219,7 +219,7 @@ export const products = [
       stars: 45,
       count: 232
     },
-    price: 4599,
+    price: 2999,
     keywords: [
       "bedroom",
       "curtains",

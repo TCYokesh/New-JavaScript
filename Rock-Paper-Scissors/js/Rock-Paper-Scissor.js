@@ -148,3 +148,14 @@ function compMove(){
     }
     return computerMove;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    let btn = document.querySelector('.btn');
+    let mainContent = document.querySelector('.new');
+    let sideMenu = document.querySelector('.sideMenu');
+    let closebtn = document.querySelector('.close-btn');
+    btn.addEventListener('click',() =>{
+        sideMenu.classList.toggle('active');
+        mainContent.classList.toggle('blur');
+    });
+});

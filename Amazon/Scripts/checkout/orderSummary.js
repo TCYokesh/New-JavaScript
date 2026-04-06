@@ -28,7 +28,7 @@ cart.forEach((cartItem) => {
 
             <div class="cart-item-details">
                 <div class="product-name">${matchinProduct.name}</div>
-                <div class="product-price">₹${matchinProduct.price}</div>
+                <div class="product-price">₹${matchinProduct.getPrice()}</div>
                 <div class="product-quantity">
                     <span>Quantity: <span class="quantity-label">${cartItem.quantity}</span></span>
                     <span class="update-quantity-link link-primary js-update" data-product-id="${matchinProduct.id}">Update</span>

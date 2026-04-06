@@ -83,8 +83,6 @@ cart.forEach((cartItem) => {
     let shipping;
     shipping = hasPaidShipping ? 49 : 0;
 
-
-    console.log(shipping);
     cart.forEach((cartItem) => {
         const matchingProduct = products.find(p => p.id === cartItem.productId);
         if (!matchingProduct) return;

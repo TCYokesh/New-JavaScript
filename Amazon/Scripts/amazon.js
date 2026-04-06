@@ -1,4 +1,4 @@
-import { cart, saveToStorage, updateCartQuantity,  } from "../data/cart.js";
+import { cart, saveToStorage, updateCartQuantity, addToCart } from "../data/cart.js";
 import { deliveryOptions } from "../data/deliveryoptions.js";
 import {products} from '../data/products.js';
  
@@ -73,26 +73,7 @@ products.forEach((product) => {
           let productContainer = button.closest('.product-container');
           const quantitySelector = productContainer.querySelector(`[class^="js-quantity-selector-"]`);
           const quantity = Number(quantitySelector.value);
-
-          let matchingItem;
-          cart.forEach((item) => {
-            if(productId == item.productId){
-              matchingItem = item;
-            }
-          });
-          if(matchingItem){
-            matchingItem.quantity += quantity;
-          }
-          else{
-            cart.push({
-            productId: productId,
-            quantity: quantity,
-            deliveryOptionId: 2
-          });
-          }
-          saveToStorage();
-          updateCartQuantity();
-
+          addToCart(productId,quantity);
           productContainer = button.closest('.product-container');
           const addedMessage = productContainer.querySelector('.added-to-cart');
           if (addedMessage) {

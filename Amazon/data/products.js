@@ -49,6 +49,21 @@ class clothing extends Product {
         `;
     }
 }
+class appliance extends Product {
+    warrantyLink;
+    
+    constructor(productDetails) {
+        super(productDetails);
+        this.warrantyLink = productDetails.warrantyLink;
+    }
+    extraInfoHTML() {
+        return `
+        <a href="${this.warrantyLink}" target="_blank">
+            Warranty Instructions 
+        </a>
+        `;
+    }
+}
 
 export const products = [
     {
@@ -297,7 +312,9 @@ export const products = [
         "water boiler",
         "appliances",
         "kitchen"
-        ]
+        ],
+        type: "appliance",
+        warrantyLink: "images/appliance-warranty.png" 
     },
     {
         id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
@@ -715,6 +732,8 @@ export const products = [
     if (productDetails.type === "clothing"){
         return new clothing(productDetails);
     }
+    else if (productDetails.type === "appliance"){
+        return new appliance(productDetails);
+    }
     return new Product(productDetails);
 });
-

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amazon</title>
+  <style>
+    /* Reset default margins and paddings */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;   /* horizontal center */
+      align-items: center;       /* vertical center */
+      min-height: 100vh;
+      background-color: #fff;
+      flex-direction: column;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .logo img {
+      height: 46px;
+      display: block;
+      margin: 0 auto;
+    }
+    .container {
+      height: 320px;
+      width: 320px;
+      border: 1px solid black;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      background-color: white;
+    }
+    h2 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    label {
+      padding-bottom: 4px;
+      padding-top: 14px;
+      font-size: 14px;
+    }
+    input {
+      height: 30px;
+      width: 100%;
+      padding: 6px 8px;
+      border-radius: 4px;
+      border: 1px solid black;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 20px;
+      height: 40px;
+      width: 100%;
+      border: 1px solid black;
+      border-radius: 20px;
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: gold;
+    }
+    .new {
+      margin-top: 12px;
+      font-size: 16px;
+      text-align: center;
+    }
+    .new a {
+      color: purple;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="images/amazon-logo.png" alt="Amazon" />
+  </div>
+
+  <div class="container">
+    <h2>Sign in or create account</h2>
+    <form action="login" method="post">
+      <label for="email">Enter Your Email</label>
+      <input type="email" id="email" placeholder="EmailId" />
+      <label for="password">Enter Password</label>
+      <input type="password" id="password" name="password" placeholder="password" maxlength="8" />
+      <button>Login</button>
+    </form>
+    <div class="new">
+      New? <a href="#">Tap to Register</a>
+    </div>
+  </div>
+</body>
+</html>
